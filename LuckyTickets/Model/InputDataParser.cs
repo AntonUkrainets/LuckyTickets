@@ -1,6 +1,6 @@
 ﻿using System.IO;
 using Liba.FilesManagers.Implements;
-using LuckyTickets.Validation;
+using Liba.Validation.Implements;
 
 namespace LuckyTickets.Model
 {
@@ -10,7 +10,7 @@ namespace LuckyTickets.Model
         {
             var filePath = args[0];
 
-            if (!Validator.IsFileExists(filePath))
+            if (!FileValidator.IsValid(filePath))
                 throw new FileNotFoundException($"File '{filePath}' not found");
 
             var fileManager = new FileManager(filePath);
