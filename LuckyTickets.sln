@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyTickets", "LuckyTicket
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuckyTicketsTests", "LuckyTicketsTests\LuckyTicketsTests.csproj", "{CF3C4896-BF6C-4BBB-AD40-863FE16E75ED}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Liba", "Liba\Liba.csproj", "{9A84D365-C84D-4320-86DC-057D7C0BD23D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CF3C4896-BF6C-4BBB-AD40-863FE16E75ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF3C4896-BF6C-4BBB-AD40-863FE16E75ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF3C4896-BF6C-4BBB-AD40-863FE16E75ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A84D365-C84D-4320-86DC-057D7C0BD23D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A84D365-C84D-4320-86DC-057D7C0BD23D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A84D365-C84D-4320-86DC-057D7C0BD23D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A84D365-C84D-4320-86DC-057D7C0BD23D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

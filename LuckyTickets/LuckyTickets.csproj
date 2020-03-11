@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="Liba">
-      <HintPath>bin\Debug\netcoreapp3.1\Liba.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Liba\Liba.csproj" />
   </ItemGroup>
 
 </Project>
