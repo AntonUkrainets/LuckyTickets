@@ -1,7 +1,7 @@
 ﻿using LuckyTickets.Business.Models;
-using LuckyTickets.Tickets.Interfaces;
+using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
 
-namespace LuckyTickets.Tickets.Resolvers.Implements
+namespace LuckyTickets.Business.Tickets.Resolvers
 {
     public class MoskowLuckyTicketResolver : ILuckyTicketResolver
     {

@@ -1,6 +1,6 @@
 ﻿using LuckyTickets;
 using LuckyTickets.Business.Models;
-using LuckyTickets.Tickets.Resolvers.Implements;
+using LuckyTickets.Business.Tickets.Resolvers;
 using Xunit;
 
 namespace LuckyTicketsTests.Tickets.Implements

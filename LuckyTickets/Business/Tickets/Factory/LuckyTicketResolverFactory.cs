@@ -1,7 +1,8 @@
-﻿using LuckyTickets.Tickets.Interfaces;
-using LuckyTickets.Tickets.Resolvers.Interfaces;
+﻿using LuckyTickets.Business.Tickets.Factory.Interfaces;
+using LuckyTickets.Business.Tickets.Resolvers;
+using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
 
-namespace LuckyTickets.Tickets.Resolvers.Implements
+namespace LuckyTickets.Business.Tickets.Factory
 {
     public class LuckyTicketResolverFactory : ILuckyTicketResolverFactory
     {

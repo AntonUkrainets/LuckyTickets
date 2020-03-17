@@ -1,6 +1,6 @@
-﻿namespace LuckyTickets.Model
+﻿namespace LuckyTickets.Core
 {
-    public class InputData
+    public class TicketsTask
     {
         public string Algorithm { get; set; }
     }

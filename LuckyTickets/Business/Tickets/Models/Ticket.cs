@@ -2,7 +2,7 @@
 {
     public class Ticket
     {
-        public int Number { get; set; }
+        public int Number { get; }
 
         public Ticket(int number)
         {

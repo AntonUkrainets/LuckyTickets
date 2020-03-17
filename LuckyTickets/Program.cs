@@ -1,9 +1,9 @@
 ﻿using Liba.Logger.Implements;
 using Liba.Logger.Interfaces;
 using LuckyTickets.Business.Tickets;
-using LuckyTickets.Model;
-using LuckyTickets.Tickets.Resolvers.Implements;
-using LuckyTickets.Tickets.Resolvers.Interfaces;
+using LuckyTickets.Business.Tickets.Factory;
+using LuckyTickets.Business.Tickets.Factory.Interfaces;
+using LuckyTickets.Core;
 
 namespace LuckyTickets
 {
@@ -26,7 +26,7 @@ namespace LuckyTickets
                 luckyTicketResolverFactory
             );
 
-            InputData inputData = InputDataParser.GetInputData(args);
+            TicketsTask inputData = InputDataParser.GetTicketsTask(args);
 
             luckyTicketProcessor.Process(inputData);
         }

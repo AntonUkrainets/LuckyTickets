@@ -1,8 +1,8 @@
-﻿using LuckyTickets.Business.Models;
-using LuckyTickets.Tickets.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using LuckyTickets.Business.Models;
+using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
 
-namespace LuckyTickets.Tickets.Resolvers.Implements
+namespace LuckyTickets.Business.Tickets.Resolvers
 {
     public class PiterLuckyTicketResolver : ILuckyTicketResolver
     {
@@ -24,7 +24,7 @@ namespace LuckyTickets.Tickets.Resolvers.Implements
             int number
         )
         {
-            var numbers = ConvertToArray(number);
+            var numbers = SplitToParts(number);
 
             foreach (var item in numbers)
             {
@@ -35,14 +35,14 @@ namespace LuckyTickets.Tickets.Resolvers.Implements
             }
         }
 
-        private IEnumerable<int> ConvertToArray(int numbers)
+        private IEnumerable<int> SplitToParts(int numbers)
         {
             var digits = new List<int>();
 
             while (numbers != 0)
             {
                 var value = numbers % 10;
-                digits.Insert(0, value);
+                digits.Add(value);
 
                 numbers /= 10;
             }

@@ -2,11 +2,11 @@
 using Liba.FilesManagers.Implements;
 using Liba.Validation.Implements;
 
-namespace LuckyTickets.Model
+namespace LuckyTickets.Core
 {
     public static class InputDataParser
     {
-        public static InputData GetInputData(string[] args)
+        public static TicketsTask GetTicketsTask(string[] args)
         {
             var filePath = args[0];
 
@@ -16,7 +16,7 @@ namespace LuckyTickets.Model
             var fileManager = new FileManager(filePath);
             var algorithm = fileManager.ReadText();
 
-            return new InputData
+            return new TicketsTask
             {
                 Algorithm = algorithm
             };

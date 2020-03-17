@@ -1,18 +1,22 @@
 ﻿using System.Collections.Generic;
 using Liba.Logger.Interfaces;
 using LuckyTickets.Business.Models;
-using LuckyTickets.Business.Tickets.Providers.Implements;
+using LuckyTickets.Business.Tickets.Factory.Interfaces;
+using LuckyTickets.Business.Tickets.Providers;
 using LuckyTickets.Business.Tickets.Providers.Interfaces;
-using LuckyTickets.Model;
-using LuckyTickets.Tickets.Interfaces;
-using LuckyTickets.Tickets.Resolvers.Interfaces;
+using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
+using LuckyTickets.Core;
 
 namespace LuckyTickets.Business.Tickets
 {
     public class LuckyTicketProcessor
     {
+        #region Private Members
+
         private readonly ILogger logger;
         private readonly ILuckyTicketResolverFactory luckyTicketResolverFactory;
+
+        #endregion
 
         public LuckyTicketProcessor(
             ILogger logger,
@@ -23,12 +27,12 @@ namespace LuckyTickets.Business.Tickets
             this.luckyTicketResolverFactory = luckyTicketResolverFactory;
         }
 
-        public void Process(InputData inputData)
+        public void Process(TicketsTask inputData)
         {
             string algorithm = inputData.Algorithm;
 
             ITicketsProvider ticketsProvider = new TicketsGenerator(
-                startIndex: 100000,
+                startIndex: 0,
                 endIndex: 999999
             );
 

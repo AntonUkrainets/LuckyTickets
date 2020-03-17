@@ -1,6 +1,6 @@
-﻿using LuckyTickets.Tickets.Interfaces;
+﻿using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
 
-namespace LuckyTickets.Tickets.Resolvers.Interfaces
+namespace LuckyTickets.Business.Tickets.Factory.Interfaces
 {
     public interface ILuckyTicketResolverFactory
     {

@@ -2,12 +2,16 @@
 using LuckyTickets.Business.Models;
 using LuckyTickets.Business.Tickets.Providers.Interfaces;
 
-namespace LuckyTickets.Business.Tickets.Providers.Implements
+namespace LuckyTickets.Business.Tickets.Providers
 {
     public class TicketsGenerator : ITicketsProvider
     {
+        #region Private Members
+
         private readonly int startIndex;
         private readonly int endIndex;
+
+        #endregion
 
         public TicketsGenerator(int startIndex, int endIndex)
         {
