@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using Liba.FilesManagers.Implements;
+using Liba.FilesManagers;
 using Liba.Validation.Implements;
 
 namespace LuckyTickets.Core

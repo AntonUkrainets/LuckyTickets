@@ -1,4 +1,4 @@
-﻿using Liba.Logger.Implements;
+﻿using Liba.Logger;
 using Liba.Logger.Interfaces;
 using LuckyTickets.Business.Tickets;
 using LuckyTickets.Business.Tickets.Factory;

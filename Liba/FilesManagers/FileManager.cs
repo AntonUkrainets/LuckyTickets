@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Liba.FilesManagers.Interfaces;
 
-namespace Liba.FilesManagers.Implements
+namespace Liba.FilesManagers
 {
     public class FileManager : IFileManager
     {

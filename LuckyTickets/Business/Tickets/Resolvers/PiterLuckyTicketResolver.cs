@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using LuckyTickets.Business.Models;
+﻿using LuckyTickets.Business.Models;
 using LuckyTickets.Business.Tickets.Resolvers.Interfaces;
+using LuckyTickets.Extensions;
 
 namespace LuckyTickets.Business.Tickets.Resolvers
 {
@@ -13,7 +13,11 @@ namespace LuckyTickets.Business.Tickets.Resolvers
             var sumEvenNumbers = 0;
             var sumOddNumbers = 0;
 
-            GetSumWholeNumbers(ref sumEvenNumbers, ref sumOddNumbers, ticket.Number);
+            GetSumWholeNumbers(
+                ref sumEvenNumbers,
+                ref sumOddNumbers,
+                ticket.Number
+            );
 
             return sumEvenNumbers == sumOddNumbers;
         }
@@ -24,7 +28,7 @@ namespace LuckyTickets.Business.Tickets.Resolvers
             int number
         )
         {
-            var numbers = SplitToParts(number);
+            var numbers = number.SplitToParts();
 
             foreach (var item in numbers)
             {
@@ -33,21 +37,6 @@ namespace LuckyTickets.Business.Tickets.Resolvers
                 else
                     sumOddNumbers += item;
             }
-        }
-
-        private IEnumerable<int> SplitToParts(int numbers)
-        {
-            var digits = new List<int>();
-
-            while (numbers != 0)
-            {
-                var value = numbers % 10;
-                digits.Add(value);
-
-                numbers /= 10;
-            }
-
-            return digits;
         }
     }
 }
